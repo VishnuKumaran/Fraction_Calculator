@@ -8,10 +8,10 @@ class HomePage extends StatefulWidget {
 class HomePageState extends State<HomePage> {
   double num1 = 0, num2 = 0, num3 = 0, num4 = 0, sum = 0;
 
-  final TextEditingController t1 = new TextEditingController(text: "0");
-  final TextEditingController t2 = new TextEditingController(text: "0");
-  final TextEditingController k1 = new TextEditingController(text: "0");
-  final TextEditingController k2 = new TextEditingController(text: "0");
+  final TextEditingController t1 = new TextEditingController(text: "");
+  final TextEditingController t2 = new TextEditingController(text: "");
+  final TextEditingController k1 = new TextEditingController(text: "");
+  final TextEditingController k2 = new TextEditingController(text: "");
 
 
 // CALCULATIONS
@@ -60,6 +60,9 @@ class HomePageState extends State<HomePage> {
     setState(() {
       t1.text = "";
       t2.text = "";
+      k1.text = "";
+      k2.text = "";
+      sum = 0;
     });
   }
 
@@ -86,14 +89,14 @@ class HomePageState extends State<HomePage> {
 
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter YOUR NUMERATOR"),
+              decoration: new InputDecoration(hintText: "Enter YOUR NUMERATOR OF FRACTION 1"),
               controller: t1,
             ),
 
       
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter YOUR DENOMINATOR"),
+              decoration: new InputDecoration(hintText: "Enter YOUR DENOMINATOR OF FRACTION 1"),
               controller: t2,
             ),
             new Padding(
@@ -101,12 +104,12 @@ class HomePageState extends State<HomePage> {
             ),
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter NUMERATOR"),
+              decoration: new InputDecoration(hintText: "Enter NUMERATOR OF FRACTION 2"),
               controller: k1,
             ),
             new TextField(
               keyboardType: TextInputType.number,
-              decoration: new InputDecoration(hintText: "Enter DENOMINATOR"),
+              decoration: new InputDecoration(hintText: "Enter DENOMINATOR OF FRACTION 2"),
               controller: k2,
             ),
 
